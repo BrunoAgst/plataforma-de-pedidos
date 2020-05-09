@@ -1,0 +1,25 @@
+<%- include("./partials/header.ejs") %>
+<body>
+    <%- include ('./partials/navbar.ejs') %>
+    <br>
+    <div class="container">
+        <div class="card-header">
+            <h3>Cadastrar Cliente</h3>
+        </div>
+        <div class="card-body">
+            <form method="POST" action="/salvar-cliente">
+                <label>Nome:</label>
+                <input type="text" name="nome" required="required" placeholder="Digite o nome do cliente" class="form-control">
+                <br>
+                <label>Telefone:</label>
+                <input type="text" name="telefone" placeholder="Digite o telefone do cliente" class="form-control">
+                <br>
+                <label>Endereço:</label>
+                <input type="text" name="endereco" placeholder="Digite o endereço do clinte" class="form-control">
+                <br>
+                <button name="enviar" class="btn btn-success">Enviar</button>
+            </form>
+        </div>
+    </div>
+</body>
+<%- include("./partials/footer.ejs") %>
