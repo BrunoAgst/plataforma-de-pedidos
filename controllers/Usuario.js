@@ -56,7 +56,7 @@ router.post("/salvar-usuario", auth, (req, res) => {
         senha: senha
     }
 
-    axios.post("http://localhost:3000/usuario", auth, usuario).then(() => {
+    axios.post("http://localhost:3000/usuario", usuario).then(() => {
         res.redirect("/visualizar-usuarios");
     }).catch(err => {
         console.log(err);
